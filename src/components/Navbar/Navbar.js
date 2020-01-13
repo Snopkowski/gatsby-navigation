@@ -60,7 +60,7 @@ const Hamburger = styled.div`
   background-color: #111;
   width: 30px;
   height: 3px;
-  transition: all 0.3s ease;
+  transition: all 0.3s linear;
   align-self: center;
   position: relative;
   transform: ${props => (props.open ? "rotate(-45deg)" : "inherit")};
@@ -82,6 +82,7 @@ const Hamburger = styled.div`
 
   ::after {
     opacity: ${props => (props.open ? "0" : "1")};
+    transform: ${props => (props.open ? "rotate(90deg) " : "inherit")};
     top: 10px;
   }
 `
